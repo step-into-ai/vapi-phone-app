@@ -32,10 +32,10 @@ export default function Settings({ onConfigChange }: SettingsProps) {
         console.error('Error loading saved config:', error);
       }
     } else {
-      // Load default values if no saved config
+      // Keep fields empty if no saved config
       setConfig({
-        apiKey: 'ef035323-e70f-4575-9cdc-57b256de9ce1',
-        assistantId: 'dd677d2a-d984-4e0e-bd6b-02ad1c9759af'
+        apiKey: '',
+        assistantId: ''
       });
     }
   }, []);
@@ -115,7 +115,7 @@ export default function Settings({ onConfigChange }: SettingsProps) {
               type="text"
               value={config.apiKey}
               onChange={(e) => handleInputChange('apiKey', e.target.value)}
-              placeholder="ef035323-e70f-4575-9cdc-57b256de9ce1"
+              placeholder="Ihr Vapi Public API Key"
               className={`w-full px-4 py-3 bg-white/5 border rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 transition-colors ${
                 errors.apiKey 
                   ? 'border-red-500 focus:ring-red-500' 
@@ -146,7 +146,7 @@ export default function Settings({ onConfigChange }: SettingsProps) {
               type="text"
               value={config.assistantId}
               onChange={(e) => handleInputChange('assistantId', e.target.value)}
-              placeholder="dd677d2a-d984-4e0e-bd6b-02ad1c9759af"
+              placeholder="Ihre Assistant ID"
               className={`w-full px-4 py-3 bg-white/5 border rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 transition-colors ${
                 errors.assistantId 
                   ? 'border-red-500 focus:ring-red-500' 

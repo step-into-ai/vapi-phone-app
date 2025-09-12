@@ -8,8 +8,8 @@ export interface VapiConfig {
 }
 
 const DEFAULT_CONFIG: VapiConfig = {
-  apiKey: 'ef035323-e70f-4575-9cdc-57b256de9ce1',
-  assistantId: 'dd677d2a-d984-4e0e-bd6b-02ad1c9759af'
+  apiKey: '',
+  assistantId: ''
 };
 
 export function useVapiConfig() {
