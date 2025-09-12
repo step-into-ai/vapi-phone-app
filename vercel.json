@@ -1,11 +1,4 @@
 {
-  \"buildCommand\": \"npm run build\",
-  \"outputDirectory\": \".next\",
-  \"devCommand\": \"npm run dev\",
-  \"installCommand\": \"npm install\",
-  \"framework\": \"nextjs\",
-  \"regions\": [\"fra1\"],
-  \"env\": {
-    \"VAPI_PUBLIC_KEY\": \"@vapi_public_key\"
-  }
+  "framework": "nextjs",
+  "regions": ["fra1"]
 }
